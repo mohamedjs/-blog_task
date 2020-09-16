@@ -33,9 +33,4 @@ class CategoryController extends Controller
         return response()->json(['status' => 'success', 'data' => CategoryResource::collection($categories), 'message' => 'get All Category']);
     }
 
-    public function show(Category $category)
-    {
-        return $this->OK($category);
-    }
-
 }
