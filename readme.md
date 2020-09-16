@@ -2,7 +2,7 @@
 
 Clone Repository
 
-`git clone https://github.com/mohamedjs/-blog_task.git`
+`git clone https://github.com/mohamedjs/blog_task.git`
 
 Move to the newly created directory
 
