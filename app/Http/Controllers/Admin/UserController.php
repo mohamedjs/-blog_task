@@ -15,7 +15,7 @@ use App\Http\Filters\StatusFilter;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class UserController extends Controller
+class UserController extends Controller implements FilterRequest
 {
     /**
      * @var UserRepository
@@ -145,6 +145,11 @@ class UserController extends Controller
       return back()->with('success', "Delete ".count(explode(',',$request->user_ids))." User Successfully");
     }
 
+    /**
+     * filters
+     * function that have array of filter key that wanted to filter with it and value of array is instance from Filter interface
+     * @return array
+     */
     public function filters()
     {
         return [

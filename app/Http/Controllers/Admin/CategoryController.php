@@ -15,7 +15,7 @@ use App\Http\Filters\StatusFilter;
 use Illuminate\Http\Request;
 use App\Models\Category;
 
-class CategoryController extends Controller
+class CategoryController extends Controller implements FilterRequest
 {
     /**
      * @var CategoryRepository
@@ -91,7 +91,7 @@ class CategoryController extends Controller
     /**
      * edit
      * edit category
-     * @param  Integer $id
+     * @param  Category $category
      * @return View
      */
     public function edit(Category $category)
@@ -143,7 +143,11 @@ class CategoryController extends Controller
               ->delete();
       return back()->with('success', "Delete ".count(explode(',',$request->category_ids))." Category Successfully");
     }
-
+    /**
+     * filters
+     * function that have array of filter key that wanted to filter with it and value of array is instance from Filter interface
+     * @return array
+     */
     public function filters()
     {
         return [
