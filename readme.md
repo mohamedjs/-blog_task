@@ -39,3 +39,9 @@ Reload Database
 Done, You're ready to go
 
 `php artisan serve`
+
+Login In Admin
+
+`/admin`
+`admin@blog.com`
+`secret`

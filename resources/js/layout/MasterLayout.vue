@@ -32,7 +32,7 @@ export default {
 		...mapState('category',['categories']),
 	},
 	methods: {
-		fetchCategory() { 
+		fetchCategory() {
 			this.$store.dispatch('category/fetchCategories')
 		}
 	},
@@ -41,9 +41,3 @@ export default {
 	}
 }
 </script>
-
-<style>
-.square{
-	margin-top: 100px;
-}
-</style>

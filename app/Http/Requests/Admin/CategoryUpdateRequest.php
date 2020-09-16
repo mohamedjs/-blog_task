@@ -26,7 +26,7 @@ class CategoryUpdateRequest extends FormRequest
     {
         return  [
             'name'  => 'required|string|unique:categories,name,'.$this->segment(3),
-            'image' => '',
+            'image' => 'mimes:png,jpeg,jpg',
             'active' => ''
         ];
     }

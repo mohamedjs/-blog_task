@@ -17,7 +17,7 @@ use App\Http\Filters\CategoryFilter;
 use Illuminate\Http\Request;
 use App\Models\Article;
 
-class ArticleController extends Controller
+class ArticleController extends Controller implements FilterRequest
 {
     /**
      * @var ArticleRepository
@@ -107,7 +107,7 @@ class ArticleController extends Controller
     /**
      * edit
      * edit article
-     * @param  Integer $id
+     * @param  Article $article
      * @return View
      */
     public function edit(Article $article)
@@ -161,6 +161,11 @@ class ArticleController extends Controller
       return back()->with('success', "Delete ".count(explode(',',$request->article_ids))." Article Successfully");
     }
 
+    /**
+     * filters
+     * function that have array of filter key that wanted to filter with it and value of array is instance from Filter interface
+     * @return array
+     */
     public function filters()
     {
         return [

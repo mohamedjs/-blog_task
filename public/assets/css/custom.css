@@ -1,0 +1,56 @@
+p {
+    font-size: 12px !important;
+}
+
+.span {
+    font-size: 14px !important;
+    color: red;
+    font-weight: bolder;
+}
+
+.vs-navbar__item {
+    font-size: 12px !important;
+}
+
+.flatpickr-input {
+    opacity: 1;
+    background: transparent;
+    padding: 7px 13px;
+    border-radius: 12px;
+    cursor: pointer;
+    -webkit-transition: all 0.25s ease, height 0s;
+    transition: all 0.25s ease, height 0s;
+    background: rgba(var(--vs-gray-2), 1);
+    color: rgba(var(--vs-text), 1);
+    min-height: 38px;
+    padding-right: 30px;
+}
+
+.all_article {
+    margin-left: 100px;
+}
+
+.filter {
+	background-color: #10163a;
+	padding: 15px;
+	margin-bottom: 8px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 1px #10163a;
+}
+.card{
+	width: 90%;
+	margin-bottom: 6px;
+	margin-right: 8px;
+}
+
+.grid-article{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+.height-70{
+height: 400px;
+}
+.square{
+	margin-top: 100px;
+}

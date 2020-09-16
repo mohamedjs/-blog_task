@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Admin\FilterRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Repository\ArticleRepository;
 use App\Http\Resources\ArticleCollection;
@@ -13,7 +14,7 @@ use App\Http\Filters\CategoryFilter;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class ArticleController extends Controller implements FilterRequest
 {
     /**
      * @var ArticleRepository
@@ -33,8 +34,8 @@ class ArticleController extends Controller
     {
         $articles = $this->articleRepository
                     ->with('comments')
-                    ->filter($this->filters())   
-                    ->active() 
+                    ->filter($this->filters())
+                    ->active()
                     ->paginate(request('per_page',12));
 
         return response()->json(['status' => 'success', 'data' => new ArticleCollection($articles), 'message' => 'get All Article']);
@@ -44,7 +45,12 @@ class ArticleController extends Controller
     {
         return  response()->json(['status' => 'success', 'data' => new ArticleResource($article), 'message' => 'get All Article']);
     }
-
+    
+    /**
+     * filters
+     * function that have array of filter key that wanted to filter with it and value of array is instance from Filter interface
+     * @return array
+     */
     public function filters()
     {
         return [

@@ -57374,7 +57374,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/',
       name: 'home',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! @/views/Home.vue */ "./resources/js/views/Home.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! @/views/Home.vue */ "./resources/js/views/Home.vue"));
       },
       meta: {
         breadcrumb: [{
@@ -57386,7 +57386,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: 'catgory/:categoryId',
       name: 'category',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! @/views/Home.vue */ "./resources/js/views/Home.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! @/views/Home.vue */ "./resources/js/views/Home.vue"));
       },
       meta: {
         breadcrumb: [{

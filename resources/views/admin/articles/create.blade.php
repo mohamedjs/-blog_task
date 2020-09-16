@@ -67,6 +67,9 @@
                                     <div class="form-group focused">
                                       <img src="" width="100%" height="100px" alt="">
                                       <label class="form-control-label" for="name">Image</label>
+                                      @error('image')
+                                        <span class="text-danger text-sm">{{ $message }}</span>
+                                      @enderror
                                       <input type="file" name="image" accept="image/*">
                                     </div>
                                 </div>

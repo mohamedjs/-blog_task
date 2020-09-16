@@ -9,6 +9,17 @@
         </div>
     </div>
     <div class="container-fluid mt--7">
+        @if(count($errors)>0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>
+                            {{$error}}
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <!-- Table -->
         <div class="row">
             <div class="col-xl-12 order-xl-1">
@@ -44,6 +55,9 @@
                                     <div class="form-group focused">
                                       <img src="{{ asset($category->image) }}" width="100%" height="100px" alt="">
                                       <label class="form-control-label" for="name">Image</label>
+                                      @error('image')
+                                        <span class="text-danger text-sm">{{ $message }}</span>
+                                      @enderror
                                       <input type="file" name="image" accept="image/*">
                                     </div>
                                 </div>
