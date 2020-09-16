@@ -10,8 +10,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/public/css/app.css
-/public/js/app.js
 /public/css1.1/app.css
 /public/js1.1/app.js
 .idea
@@ -23,4 +21,3 @@ yarn-error.log
 /public/webfonts/*
 /public/assets/js/web.app.js
 /public/uploads/*
-.env
